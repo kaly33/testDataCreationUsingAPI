@@ -1,0 +1,28 @@
+{
+  "name": "regionalization-test-data-creation",
+  "version": "1.0.0",
+  "description": "Test data creation for regionalization testing",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:api": "playwright test testDataCreation --reporter=line --timeout=300000",
+    "test:api-single": "playwright test singleUserTest --reporter=line --timeout=300000",
+    "test:ui": "playwright test uiEmailRegistration --reporter=line --timeout=120000",
+    "test:ui-batch": "playwright test uiBatchRegistration --reporter=line --timeout=300000",
+    "test:e2e": "node run-e2e-tests.js",
+    "test:e2e-single": "node run-single-e2e-test.js"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.54.1",
+    "axios": "^1.10.0",
+    "dotenv": "^17.2.0",
+    "mailosaur": "^8.8.1"
+  },
+  "main": "playwright.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "staging-ind",
+  "baseURL": "developer-stg.api.autodesk.com",
+  "region": "IND",
+  "defaultUserId": "XGU2GFLMLQ6F4ED7",
+  "accountIds": {
+    "account1": "629a7162-25b2-4de3-9733-c1160b5c01da",
+    "account2": "94af5f94-f875-4215-9b68-0fa0a8b2ce41",
+    "account3": "eefe2e8d-09c7-4bd0-8201-eee5791faf9b",
+    "account4": "249ffe9b-e107-4cbc-ae29-4ebdab8fef6c"
+  }
+}
+

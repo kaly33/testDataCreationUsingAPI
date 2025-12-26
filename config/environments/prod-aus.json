@@ -1,0 +1,13 @@
+{
+  "name": "prod-aus",
+  "baseURL": "developer.api.autodesk.com",
+  "uiBaseURL": "https://accounts.autodesk.com/",
+  "region": "AUS",
+  "defaultUserId": "H482DVJKMRKAB8VF",
+  "accountIds": {
+    "account1": "0714319f-2098-43b3-be3c-2fe2e8cc95aa",
+    "account2": "0714319f-2098-43b3-be3c-2fe2e8cc95aa",
+    "account3": "0714319f-2098-43b3-be3c-2fe2e8cc95aa",
+    "account4": "0714319f-2098-43b3-be3c-2fe2e8cc95aa"
+  }
+}

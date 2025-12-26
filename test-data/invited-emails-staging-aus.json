@@ -1,0 +1,18 @@
+{
+  "generatedAt": "2025-10-14T10:59:01.011Z",
+  "totalEmails": 1,
+  "emails": [
+    {
+      "email": "custom-int@pbrnfri5.mailosaur.net",
+      "userType": "account_admin",
+      "accountId": "d48baabb-a4e9-4fd3-8652-86551ada22fb",
+      "projectId": null,
+      "firstName": "Custom",
+      "lastName": "Integration",
+      "invitedAt": "2025-10-14T10:59:01.010Z"
+    }
+  ],
+  "summary": {
+    "account_admin": 1
+  }
+}

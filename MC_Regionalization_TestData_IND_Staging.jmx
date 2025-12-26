@@ -1,0 +1,2497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.2">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="MC Regionalization Test Data Creation" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <stringProp name="LoopController.loops">1</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.delayedStart">false</boolProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="baseUrl" elementType="Argument">
+              <stringProp name="Argument.value">developer-stg.api.autodesk.com</stringProp>
+              <stringProp name="Argument.name">baseUrl</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="accountId1" elementType="Argument">
+              <stringProp name="Argument.name">accountId1</stringProp>
+              <stringProp name="Argument.value">eefe2e8d-09c7-4bd0-8201-eee5791faf9b</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="accountId2" elementType="Argument">
+              <stringProp name="Argument.value">249ffe9b-e107-4cbc-ae29-4ebdab8fef6c</stringProp>
+              <stringProp name="Argument.name">accountId2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="accountId3" elementType="Argument">
+              <stringProp name="Argument.name">accountId3</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.value">94af5f94-f875-4215-9b68-0fa0a8b2ce41</stringProp>
+            </elementProp>
+            <elementProp name="accountId4" elementType="Argument">
+              <stringProp name="Argument.name">accountId4</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.value">629a7162-25b2-4de3-9733-c1160b5c01da</stringProp>
+            </elementProp>
+            <elementProp name="User-Id" elementType="Argument">
+              <stringProp name="Argument.name">User-Id</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.value">XGU2GFLMLQ6F4ED7</stringProp>
+            </elementProp>
+            <elementProp name="env" elementType="Argument">
+              <stringProp name="Argument.name">env</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.value">stg-ind</stringProp>
+            </elementProp>
+            <elementProp name="token" elementType="Argument">
+              <stringProp name="Argument.name">token</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.value">eyJhbGciOiJSUzI1NiIsImtpZCI6Im1EVUVQb2tuYTF3RU9uZ1k4X3RMNEdOZGtsTV9SUzI1NiIsInBpLmF0bSI6ImFzc2MifQ.eyJzY29wZSI6WyJhY2NvdW50OnJlYWQiLCJhY2NvdW50OndyaXRlIiwiYnVja2V0OmNyZWF0ZSIsImJ1Y2tldDpyZWFkIiwiYnVja2V0OnVwZGF0ZSIsImJ1Y2tldDpkZWxldGUiLCJkYXRhOnJlYWQiLCJkYXRhOndyaXRlIiwiZGF0YTpjcmVhdGUiLCJkYXRhOnNlYXJjaCIsInVzZXI6cmVhZCIsInVzZXI6d3JpdGUiLCJ1c2VyLXByb2ZpbGU6cmVhZCIsInZpZXdhYmxlczpyZWFkIl0sImNsaWVudF9pZCI6IlI1eVEwYTFCS0ZwZ0x6UHAyNktXOEw1SWhwMjRudkpYWHlTYlVjRWdSeU9oVER6USIsImlzcyI6Imh0dHBzOi8vZGV2ZWxvcGVyLXN0Zy5hcGkuYXV0b2Rlc2suY29tIiwiYXVkIjoiaHR0cHM6Ly9hdXRvZGVzay5jb20vc3RhZ2luZyIsImp0aSI6IlhTRnRPakNhaFRPTXJrRGNvMm9pdW5sTXE1Q21vUUNGVHhyN3dCazV6WmxkTTRoWGJpUXo2ZHBVUjd3NnZLRk8iLCJ1c2VyaWQiOiJYR1UyR0ZMTUxRNkY0RUQ3IiwiZXhwIjoxNzQ0OTAyMzYyfQ.Q0stIP_cZzSDVU8hei5Q0iytqzV9g_7Fspcz03udZHqSXbkx-noNIpdtc_98SvBdRYpCBaiILdUeG9_m8y2QTp9i5kob73LDfyQRd5a8vAANpraTJwR_7cmNU3C25WD2xGBX3Jw1ZskbjhBz2jBeoVdBQhk32L09zkABXysT5LsOd-PRaR7xGBWMoM7YQDDFYxA8-qiKbrwOvpPD1kdEzMMn70akY3hTZlXNiYzyQkVV_aOIiq1FCvXOEYYyIx3buV9w8pMlSciz2rVt3lIoCzokTxt4lyVSwj6kQuSkAJQjOnn-iguAu6V4gPMw9daGXhsdGTDevnl8d96weqjc2Q</stringProp>
+            </elementProp>
+            <elementProp name="testPrefix" elementType="Argument">
+              <stringProp name="Argument.name">testPrefix</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="Region" elementType="Argument">
+              <stringProp name="Argument.name">Region</stringProp>
+              <stringProp name="Argument.value">IND</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Authorization" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="grant_type" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">grant_type</stringProp>
+                <stringProp name="Argument.value">client_credentials</stringProp>
+              </elementProp>
+              <elementProp name="client_id" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">client_id</stringProp>
+                <stringProp name="Argument.value">YYx1goDN03j5cE97r4qKFfHCpxi0P6o9</stringProp>
+              </elementProp>
+              <elementProp name="client_secret" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">client_secret</stringProp>
+                <stringProp name="Argument.value">dDT5ccr07XzCZnAm</stringProp>
+              </elementProp>
+              <elementProp name="mandatory_scope" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">mandatory_scope</stringProp>
+                <stringProp name="Argument.value">true</stringProp>
+              </elementProp>
+              <elementProp name="User-Id" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">User-Id</stringProp>
+                <stringProp name="Argument.value">${User-Id}</stringProp>
+              </elementProp>
+              <elementProp name="scope" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">scope</stringProp>
+                <stringProp name="Argument.value">account:write</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/authentication/v2/token</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">false</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <boolProp name="HTTPSampler.md5">false</boolProp>
+          <intProp name="HTTPSampler.ipSourceType">0</intProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - token" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">token</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.access_token</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Accounts" enabled="true"/>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${token}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Region</stringProp>
+                <stringProp name="Header.value">${Region}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">User-Id</stringProp>
+                <stringProp name="Header.value">${User-Id}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Account 1 - MC Testing - R13N Roles and Companies" enabled="true"/>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Account 1 - Create new Project 1" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+  &quot;name&quot;: &quot;${testPrefix}FOR CYPRESS TESTING ONLY&quot;,&#xd;
+  &quot;classification&quot;: &quot;production&quot;,&#xd;
+  &quot;startDate&quot;: &quot;2010-01-01&quot;,&#xd;
+  &quot;endDate&quot;: &quot;2015-12-31&quot;,&#xd;
+  &quot;type&quot;: &quot;Hospital&quot;,&#xd;
+  &quot;projectValue&quot;: {&#xd;
+    &quot;value&quot;: 1650000,&#xd;
+    &quot;currency&quot;: &quot;USD&quot;&#xd;
+  },&#xd;
+  &quot;jobNumber&quot;: &quot;HP-0002&quot;,&#xd;
+  &quot;addressLine1&quot;: &quot;123 Main Street&quot;,&#xd;
+  &quot;addressLine2&quot;: &quot;Suite 2&quot;,&#xd;
+  &quot;city&quot;: &quot;San Francisco&quot;,&#xd;
+  &quot;stateOrProvince&quot;: &quot;California&quot;,&#xd;
+  &quot;postalCode&quot;: &quot;94001&quot;,&#xd;
+  &quot;country&quot;: &quot;United States&quot;,&#xd;
+  &quot;timezone&quot;: &quot;America/Los_Angeles&quot;,&#xd;
+  &quot;constructionType&quot;: &quot;New Construction&quot;,&#xd;
+  &quot;deliveryMethod&quot;: &quot;Unit Price&quot;,&#xd;
+  &quot;currentPhase&quot;: &quot;Design&quot;,&#xd;
+  &quot;products&quot;: [&#xd;
+    {&#xd;
+      &quot;key&quot;: &quot;docs&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;key&quot;: &quot;build&quot;&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">/construction/admin/v1/accounts/${accountId1}/projects</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - projectId" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">projectId</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - accountId" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">accountId</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.accountId</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+                <stringProp name="ConstantTimer.delay">2000</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+            </hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Add Project Users" enabled="true"/>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add new project user 1" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+	&quot;email&quot;:&quot;${testPrefix}checkprojectmember_${env}@pbrnfri5.mailosaur.net&quot;,&#xd;
+	&quot;firstName&quot;: &quot;checkprojectmember&quot;,&#xd;
+	&quot;lastName&quot;: &quot;regionLastName&quot;,&#xd;
+	&quot;products&quot;:[&#xd;
+		 	 {&#xd;
+		          &quot;key&quot;: &quot;projectAdministration&quot;,&#xd;
+		          &quot;access&quot;: &quot;administrator&quot;&#xd;
+     		 },&#xd;
+		  	 {&#xd;
+		    	 	 &quot;key&quot;: &quot;build&quot;,&#xd;
+		    	 	 &quot;access&quot;: &quot;administrator&quot;&#xd;
+		  	 },&#xd;
+		   	 {&#xd;
+		     	 &quot;key&quot;: &quot;docs&quot;,&#xd;
+		   	  	 &quot;access&quot;: &quot;administrator&quot;&#xd;
+   			 },&#xd;
+   			 {&#xd;
+   			 	&quot;key&quot;:&quot;designCollaboration&quot;,&#xd;
+   			 	&quot;access&quot;:&quot;administrator&quot;&#xd;
+   			 },&#xd;
+   			 {&#xd;
+   			 	&quot;key&quot;:&quot;cost&quot;,&#xd;
+   			 	&quot;access&quot;:&quot;administrator&quot;&#xd;
+   			 },&#xd;
+   			 {&#xd;
+   			 	&quot;key&quot;:&quot;modelCoordination&quot;,&#xd;
+   			 	&quot;access&quot;:&quot;administrator&quot;&#xd;
+   			 },&#xd;
+   			 {&#xd;
+   			 	&quot;key&quot;:&quot;insight&quot;,&#xd;
+   			 	&quot;access&quot;:&quot;administrator&quot;&#xd;
+   			 },&#xd;
+   			 {&#xd;
+   			 	&quot;key&quot;:&quot;takeoff&quot;,&#xd;
+   			 	&quot;access&quot;:&quot;administrator&quot;&#xd;
+   			 },&#xd;
+   			  {&#xd;
+   			 	&quot;key&quot;:&quot;autoSpecs&quot;,&#xd;
+   			 	&quot;access&quot;:&quot;administrator&quot;&#xd;
+   			 }&#xd;
+ 		   ] 		&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.path">/construction/admin/v1/projects/${projectId}/users</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+                <boolProp name="HTTPSampler.image_parser">false</boolProp>
+                <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+                <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+                <boolProp name="HTTPSampler.md5">false</boolProp>
+                <intProp name="HTTPSampler.ipSourceType">0</intProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - emailID" enabled="true">
+                  <stringProp name="JSONPostProcessor.referenceNames">emailID</stringProp>
+                  <stringProp name="JSONPostProcessor.jsonPathExprs">$.email</stringProp>
+                  <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+                </JSONPostProcessor>
+                <hashTree/>
+                <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - AutodeskId" enabled="true">
+                  <stringProp name="JSONPostProcessor.referenceNames">userID</stringProp>
+                  <stringProp name="JSONPostProcessor.jsonPathExprs">$.autodeskId</stringProp>
+                  <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+                </JSONPostProcessor>
+                <hashTree/>
+                <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="true">
+                  <stringProp name="FileSaver.filename">/Users/kalyanikachhi/Downloads/responseInviteUserProject</stringProp>
+                  <boolProp name="FileSaver.errorsonly">false</boolProp>
+                  <boolProp name="FileSaver.successonly">true</boolProp>
+                  <boolProp name="FileSaver.skipsuffix">false</boolProp>
+                  <boolProp name="FileSaver.skipautonumber">true</boolProp>
+                  <boolProp name="FileSaver.ignoreTC">false</boolProp>
+                  <boolProp name="FileSaver.addTimstamp">true</boolProp>
+                </ResultSaver>
+                <hashTree/>
+                <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor - Write data in json file" enabled="true">
+                  <stringProp name="cacheKey">true</stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="script">// Define the path to your file
+
+	try {
+	def filePath = &apos;/Users/kalyanikachhi/Downloads/SaveProjectResponse.txt&apos;
+	
+	// Read the content of the file
+	def file = new File(filePath)
+	def content = file.text
+	
+	// Update the variable values
+	//content = content.replaceAll(&quot;id&quot;, vars.get(&quot;id&quot;))
+	//content = content.replaceAll(&quot;accountId&quot;, vars.get(&quot;accountId&quot;))
+	content = content.replaceAll(&quot;email_id&quot;, vars.get(&quot;emailID&quot;))
+	content = content.replaceAll(&quot;autodesk_Id&quot;, vars.get(&quot;userID&quot;))
+	
+	// Write the updated content back to the file
+	file.write(content)
+
+
+} catch (Exception e) {
+    log.error(&quot;Error writing to file: &quot; + e.message)
+}</stringProp>
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                </JSR223PostProcessor>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Update Project User status 1" enabled="false">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+  &quot;status&quot;: &quot;active&quot;&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.path">/ea-api/v1/accounts/${accountId1}/users/${userID}</stringProp>
+                <stringProp name="HTTPSampler.method">PATCH</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+                <boolProp name="HTTPSampler.image_parser">false</boolProp>
+                <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+                <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+                <boolProp name="HTTPSampler.md5">false</boolProp>
+                <intProp name="HTTPSampler.ipSourceType">0</intProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - ID" enabled="true">
+                  <stringProp name="JSONPostProcessor.referenceNames">ID</stringProp>
+                  <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                  <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+                </JSONPostProcessor>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Add Account Users" enabled="true"/>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add new account user 2" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+&#xd;
+		  	&quot;email&quot;: &quot;${testPrefix}aauserforroles_2_${env}@pbrnfri5.mailosaur.net&quot;,&#xd;
+		 	&quot;firstName&quot;: &quot;aauserforroles1&quot;,&#xd;
+		     &quot;lastName&quot;: &quot;aauserforrolesregionLastName1&quot;,&#xd;
+		     &quot;accessLevels&quot;:&#xd;
+		     {&#xd;
+				&quot;accountAdmin&quot;:true,&#xd;
+				&quot;accountStandardsAdministrator&quot;:true&#xd;
+		     }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.path">/bim360/admin/v1/accounts/${accountId1}/users</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+                <boolProp name="HTTPSampler.image_parser">false</boolProp>
+                <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+                <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+                <boolProp name="HTTPSampler.md5">false</boolProp>
+                <intProp name="HTTPSampler.ipSourceType">0</intProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                  <stringProp name="JSONPostProcessor.referenceNames">userID</stringProp>
+                  <stringProp name="JSONPostProcessor.jsonPathExprs">$.autodeskId</stringProp>
+                  <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+                </JSONPostProcessor>
+                <hashTree/>
+                <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="true">
+                  <stringProp name="FileSaver.filename">responseInviteUserAccount</stringProp>
+                  <boolProp name="FileSaver.errorsonly">false</boolProp>
+                  <boolProp name="FileSaver.successonly">false</boolProp>
+                  <boolProp name="FileSaver.skipsuffix">false</boolProp>
+                  <boolProp name="FileSaver.skipautonumber">false</boolProp>
+                  <boolProp name="FileSaver.ignoreTC">false</boolProp>
+                  <stringProp name="FileSaver.variablename">response</stringProp>
+                </ResultSaver>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Update User status 2" enabled="false">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+  &quot;status&quot;: &quot;active&quot;&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.path">/ea-api/v1/accounts/${accountId}/users/${userID}</stringProp>
+                <stringProp name="HTTPSampler.method">PATCH</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+                <boolProp name="HTTPSampler.image_parser">false</boolProp>
+                <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+                <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+                <boolProp name="HTTPSampler.md5">false</boolProp>
+                <intProp name="HTTPSampler.ipSourceType">0</intProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                  <stringProp name="JSONPostProcessor.referenceNames">ID</stringProp>
+                  <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                  <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+                </JSONPostProcessor>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add new account user 3" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+&#xd;
+		  	&quot;email&quot;: &quot;${testPrefix}testcompany-${env}@pbrnfri5.mailosaur.net&quot;,&#xd;
+		 	&quot;firstName&quot;: &quot;testcompany1&quot;,&#xd;
+		     &quot;lastName&quot;: &quot;testcompanyregionLastName1&quot;,&#xd;
+		     &quot;accessLevels&quot;:&#xd;
+		     {&#xd;
+				&quot;accountAdmin&quot;:true,&#xd;
+				&quot;accountStandardsAdministrator&quot;:true&#xd;
+		     }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.path">/bim360/admin/v1/accounts/${accountId1}/users</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+                <boolProp name="HTTPSampler.image_parser">false</boolProp>
+                <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+                <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+                <boolProp name="HTTPSampler.md5">false</boolProp>
+                <intProp name="HTTPSampler.ipSourceType">0</intProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                  <stringProp name="JSONPostProcessor.referenceNames">userID</stringProp>
+                  <stringProp name="JSONPostProcessor.jsonPathExprs">$.autodeskId</stringProp>
+                  <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+                </JSONPostProcessor>
+                <hashTree/>
+                <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="true">
+                  <stringProp name="FileSaver.filename">responseInviteUserAccount</stringProp>
+                  <boolProp name="FileSaver.errorsonly">false</boolProp>
+                  <boolProp name="FileSaver.successonly">false</boolProp>
+                  <boolProp name="FileSaver.skipsuffix">false</boolProp>
+                  <boolProp name="FileSaver.skipautonumber">false</boolProp>
+                  <boolProp name="FileSaver.ignoreTC">false</boolProp>
+                  <stringProp name="FileSaver.variablename">response</stringProp>
+                </ResultSaver>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Update User status 3" enabled="false">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+  &quot;status&quot;: &quot;active&quot;&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.path">/ea-api/v1/accounts/${accountId}/users/${userID}</stringProp>
+                <stringProp name="HTTPSampler.method">PATCH</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+                <boolProp name="HTTPSampler.image_parser">false</boolProp>
+                <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+                <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+                <boolProp name="HTTPSampler.md5">false</boolProp>
+                <intProp name="HTTPSampler.ipSourceType">0</intProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                  <stringProp name="JSONPostProcessor.referenceNames">ID</stringProp>
+                  <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                  <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+                </JSONPostProcessor>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add new account user 4" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">  {&#xd;
+&#xd;
+		    	&quot;email&quot;: &quot;${testPrefix}testcompany_2-${env}@pbrnfri5.mailosaur.net&quot;,&#xd;
+		 	&quot;firstName&quot;: &quot;testcompany2&quot;,&#xd;
+		     &quot;lastName&quot;: &quot;testcompanyregionLastName2&quot;,&#xd;
+		     &quot;accessLevels&quot;:&#xd;
+		     {&#xd;
+				&quot;accountAdmin&quot;:true,&#xd;
+				&quot;accountStandardsAdministrator&quot;:true&#xd;
+		     }&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.path">/bim360/admin/v1/accounts/${accountId1}/users</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+                <boolProp name="HTTPSampler.image_parser">false</boolProp>
+                <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+                <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+                <boolProp name="HTTPSampler.md5">false</boolProp>
+                <intProp name="HTTPSampler.ipSourceType">0</intProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                  <stringProp name="JSONPostProcessor.referenceNames">userID</stringProp>
+                  <stringProp name="JSONPostProcessor.jsonPathExprs">$.autodeskId</stringProp>
+                  <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+                </JSONPostProcessor>
+                <hashTree/>
+                <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="true">
+                  <stringProp name="FileSaver.filename">responseInviteUserAccount</stringProp>
+                  <boolProp name="FileSaver.errorsonly">false</boolProp>
+                  <boolProp name="FileSaver.successonly">false</boolProp>
+                  <boolProp name="FileSaver.skipsuffix">false</boolProp>
+                  <boolProp name="FileSaver.skipautonumber">false</boolProp>
+                  <boolProp name="FileSaver.ignoreTC">false</boolProp>
+                  <stringProp name="FileSaver.variablename">response</stringProp>
+                </ResultSaver>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Update User status 4" enabled="false">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+  &quot;status&quot;: &quot;active&quot;&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.path">/ea-api/v1/accounts/${accountId}/users/${userID}</stringProp>
+                <stringProp name="HTTPSampler.method">PATCH</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+                <boolProp name="HTTPSampler.image_parser">false</boolProp>
+                <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+                <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+                <boolProp name="HTTPSampler.md5">false</boolProp>
+                <intProp name="HTTPSampler.ipSourceType">0</intProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                  <stringProp name="JSONPostProcessor.referenceNames">ID</stringProp>
+                  <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                  <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+                </JSONPostProcessor>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 - Write data in Account Admin json file" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import java.nio.file.Files
+import java.nio.file.Paths
+import java.nio.charset.StandardCharsets
+
+// Define the path to your file
+
+try {
+	def filePath = &apos;/Users/kalyanikachhi/Documents/JmeterRegionalization/JmeterTestDataCreationRegionalization/src/testResult/index_accountAdmin.json&apos;
+	
+ // Read the existing content of the JSON file
+    def fileContent = new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8)
+
+    // Parse the JSON content
+    def jsonData = new JsonSlurper().parseText(fileContent)
+	
+	// Update the variable values
+
+     if(jsonData.testAccountCompanies.accountName == &quot;MC Testing - R13N Roles and Companies&quot;)
+     {
+		jsonData.testAccountCompanies.accountId = vars.get(&quot;accountId&quot;)
+		jsonData.testAccountCompanies.projectId = vars.get(&quot;projectId&quot;)
+     }
+     if(jsonData.testAssignRoles.accountName == &quot;MC Testing - R13N Roles and Companies&quot;)
+     {
+		jsonData.testAssignRoles.accountId2 = vars.get(&quot;accountId&quot;)
+     }
+	
+    def updatedJson = JsonOutput.prettyPrint(JsonOutput.toJson(jsonData))
+	
+ // Write the updated JSON string back to the file
+    Files.write(Paths.get(filePath), updatedJson.getBytes(StandardCharsets.UTF_8))
+
+
+
+} catch (Exception e) {
+    log.error(&quot;Error writing to file: &quot; + e.message)
+}</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Account 2 - MC Testing - R13N Projects and Members" enabled="true"/>
+          <hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Account 2 - Create Project 2 &amp; Invite Users" enabled="true"/>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Account 2 - Create new Project 2" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+  &quot;name&quot;: &quot;${testPrefix}TEST INVITES CYPRESS 01&quot;,&#xd;
+  &quot;classification&quot;: &quot;production&quot;,&#xd;
+  &quot;startDate&quot;: &quot;2010-01-01&quot;,&#xd;
+  &quot;endDate&quot;: &quot;2015-12-31&quot;,&#xd;
+  &quot;type&quot;: &quot;Hospital&quot;,&#xd;
+  &quot;projectValue&quot;: {&#xd;
+    &quot;value&quot;: 1650000,&#xd;
+    &quot;currency&quot;: &quot;USD&quot;&#xd;
+  },&#xd;
+  &quot;jobNumber&quot;: &quot;HP-0002&quot;,&#xd;
+  &quot;addressLine1&quot;: &quot;123 Main Street&quot;,&#xd;
+  &quot;addressLine2&quot;: &quot;Suite 2&quot;,&#xd;
+  &quot;city&quot;: &quot;San Francisco&quot;,&#xd;
+  &quot;stateOrProvince&quot;: &quot;California&quot;,&#xd;
+  &quot;postalCode&quot;: &quot;94001&quot;,&#xd;
+  &quot;country&quot;: &quot;United States&quot;,&#xd;
+  &quot;timezone&quot;: &quot;America/Los_Angeles&quot;,&#xd;
+  &quot;constructionType&quot;: &quot;New Construction&quot;,&#xd;
+  &quot;deliveryMethod&quot;: &quot;Unit Price&quot;,&#xd;
+  &quot;currentPhase&quot;: &quot;Design&quot;,&#xd;
+  &quot;products&quot;: [&#xd;
+    {&#xd;
+      &quot;key&quot;: &quot;docs&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;key&quot;: &quot;build&quot;&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.path">/construction/admin/v1/accounts/${accountId2}/projects</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+                <boolProp name="HTTPSampler.image_parser">false</boolProp>
+                <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+                <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+                <boolProp name="HTTPSampler.md5">false</boolProp>
+                <intProp name="HTTPSampler.ipSourceType">0</intProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - projectId" enabled="true">
+                  <stringProp name="JSONPostProcessor.referenceNames">projectId1</stringProp>
+                  <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                  <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+                </JSONPostProcessor>
+                <hashTree/>
+                <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - accountId" enabled="true">
+                  <stringProp name="JSONPostProcessor.referenceNames">accountID</stringProp>
+                  <stringProp name="JSONPostProcessor.jsonPathExprs">$.accountId</stringProp>
+                  <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+                </JSONPostProcessor>
+                <hashTree/>
+                <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 - Write data in Project Admin json file" enabled="true">
+                  <stringProp name="cacheKey">true</stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import java.nio.file.Files
+import java.nio.file.Paths
+import java.nio.charset.StandardCharsets
+
+// Define the path to your file
+
+try {
+	def filePath = &apos;/Users/kalyanikachhi/Documents/JmeterRegionalization/JmeterTestDataCreationRegionalization/src/testResult/index_projectAdmin.json&apos;
+	
+ // Read the existing content of the JSON file
+    def fileContent = new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8)
+
+    // Parse the JSON content
+    def jsonData = new JsonSlurper().parseText(fileContent)
+	
+	// Update the variable values
+     if(jsonData.advanceProjectMembers.projectName.contains(&quot;TEST INVITES CYPRESS 01&quot;))
+     {
+		jsonData.advanceProjectMembers.projectId = vars.get(&quot;projectId1&quot;)
+     }
+	
+    def updatedJson = JsonOutput.prettyPrint(JsonOutput.toJson(jsonData))
+	
+ // Write the updated JSON string back to the file
+    Files.write(Paths.get(filePath), updatedJson.getBytes(StandardCharsets.UTF_8))
+
+} catch (Exception e) {
+    log.error(&quot;Error writing to file: &quot; + e.message)
+}</stringProp>
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                </JSR223PostProcessor>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Invite Project Admin User 10 to project" enabled="false">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+		  	&quot;email&quot;: &quot;${testPrefix}user_apma_emailRegion+34@pbrnfri5.mailosaur.net&quot;,&#xd;
+		 	 &quot;firstName&quot;: &quot;APMA&quot;,&#xd;
+		 	 &quot;lastName&quot;: &quot;User&quot;,&#xd;
+		 	 &quot;products&quot;:[&#xd;
+			 	 {&#xd;
+			          &quot;key&quot;: &quot;projectAdministration&quot;,&#xd;
+			          &quot;access&quot;: &quot;administrator&quot;&#xd;
+	     		 },&#xd;
+	     		  {&#xd;
+			    	 	 &quot;key&quot;: &quot;build&quot;,&#xd;
+			    	 	 &quot;access&quot;: &quot;administrator&quot;&#xd;
+			  	 }&#xd;
+		 	]&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.path">/construction/admin/v1/projects/${projectId}/users</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+                <boolProp name="HTTPSampler.image_parser">false</boolProp>
+                <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+                <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+                <boolProp name="HTTPSampler.md5">false</boolProp>
+                <intProp name="HTTPSampler.ipSourceType">0</intProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                  <stringProp name="JSONPostProcessor.referenceNames">emailID</stringProp>
+                  <stringProp name="JSONPostProcessor.jsonPathExprs">$.email</stringProp>
+                  <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+                </JSONPostProcessor>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Invite Project Member User 5 to project" enabled="false">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+		  	&quot;email&quot;: &quot;${testPrefix}user_apma_emailRegion+33@pbrnfri5.mailosaur.net&quot;,&#xd;
+		 	 &quot;firstName&quot;: &quot;APMA&quot;,&#xd;
+		 	 &quot;lastName&quot;: &quot;User&quot;,&#xd;
+		      &quot;products&quot;:[&#xd;
+			 	 {&#xd;
+			          &quot;key&quot;: &quot;projectAdministration&quot;,&#xd;
+			          &quot;access&quot;: &quot;administrator&quot;&#xd;
+	     		 },&#xd;
+	     		  {&#xd;
+			    	 	 &quot;key&quot;: &quot;build&quot;,&#xd;
+			    	 	 &quot;access&quot;: &quot;administrator&quot;&#xd;
+			  	 }&#xd;
+		 	]&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.path">/construction/admin/v1/projects/${projectId}/users</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+                <boolProp name="HTTPSampler.image_parser">false</boolProp>
+                <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+                <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+                <boolProp name="HTTPSampler.md5">false</boolProp>
+                <intProp name="HTTPSampler.ipSourceType">0</intProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                  <stringProp name="JSONPostProcessor.referenceNames">emailID</stringProp>
+                  <stringProp name="JSONPostProcessor.jsonPathExprs">$.email</stringProp>
+                  <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+                </JSONPostProcessor>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Create Project 3 &amp; Invite Users" enabled="true"/>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create new Project 3" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+  &quot;name&quot;: &quot;${testPrefix}TEST INVITES CYPRESS 02&quot;,&#xd;
+  &quot;classification&quot;: &quot;production&quot;,&#xd;
+  &quot;startDate&quot;: &quot;2010-01-01&quot;,&#xd;
+  &quot;endDate&quot;: &quot;2015-12-31&quot;,&#xd;
+  &quot;type&quot;: &quot;Hospital&quot;,&#xd;
+  &quot;projectValue&quot;: {&#xd;
+    &quot;value&quot;: 1650000,&#xd;
+    &quot;currency&quot;: &quot;USD&quot;&#xd;
+  },&#xd;
+  &quot;jobNumber&quot;: &quot;HP-0002&quot;,&#xd;
+  &quot;addressLine1&quot;: &quot;123 Main Street&quot;,&#xd;
+  &quot;addressLine2&quot;: &quot;Suite 2&quot;,&#xd;
+  &quot;city&quot;: &quot;San Francisco&quot;,&#xd;
+  &quot;stateOrProvince&quot;: &quot;California&quot;,&#xd;
+  &quot;postalCode&quot;: &quot;94001&quot;,&#xd;
+  &quot;country&quot;: &quot;United States&quot;,&#xd;
+  &quot;timezone&quot;: &quot;America/Los_Angeles&quot;,&#xd;
+  &quot;constructionType&quot;: &quot;New Construction&quot;,&#xd;
+  &quot;deliveryMethod&quot;: &quot;Unit Price&quot;,&#xd;
+  &quot;currentPhase&quot;: &quot;Design&quot;,&#xd;
+  &quot;products&quot;: [&#xd;
+    {&#xd;
+      &quot;key&quot;: &quot;docs&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;key&quot;: &quot;build&quot;&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.path">/construction/admin/v1/accounts/${accountId2}/projects</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+                <boolProp name="HTTPSampler.image_parser">false</boolProp>
+                <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+                <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+                <boolProp name="HTTPSampler.md5">false</boolProp>
+                <intProp name="HTTPSampler.ipSourceType">0</intProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - projectId" enabled="true">
+                  <stringProp name="JSONPostProcessor.referenceNames">projectId2</stringProp>
+                  <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                  <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+                </JSONPostProcessor>
+                <hashTree/>
+                <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - accountId" enabled="true">
+                  <stringProp name="JSONPostProcessor.referenceNames">accountID</stringProp>
+                  <stringProp name="JSONPostProcessor.jsonPathExprs">$.accountId</stringProp>
+                  <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+                </JSONPostProcessor>
+                <hashTree/>
+                <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+                  <stringProp name="ConstantTimer.delay">2000</stringProp>
+                </ConstantTimer>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Invite Project Admin user 8 to project" enabled="false">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value"> {&#xd;
+&#xd;
+		  	&quot;email&quot;: &quot;${testPrefix}user_invitations_emailRegion+33@pbrnfri5.mailosaur.net&quot;,&#xd;
+		 	&quot;firstName&quot;: &quot;INVITATIONS&quot;,&#xd;
+		 	&quot;lastName&quot;: &quot;User&quot;,&#xd;
+		 	&quot;products&quot;:[&#xd;
+		 	 {&#xd;
+		          &quot;key&quot;: &quot;projectAdministration&quot;,&#xd;
+		          &quot;access&quot;: &quot;administrator&quot;&#xd;
+     		 },&#xd;
+		  	 {&#xd;
+		    	 	 &quot;key&quot;: &quot;build&quot;,&#xd;
+		    	 	 &quot;access&quot;: &quot;administrator&quot;&#xd;
+		  	 }]&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.path">/construction/admin/v1/projects/${projectId}/users</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+                <boolProp name="HTTPSampler.image_parser">false</boolProp>
+                <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+                <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+                <boolProp name="HTTPSampler.md5">false</boolProp>
+                <intProp name="HTTPSampler.ipSourceType">0</intProp>
+              </HTTPSamplerProxy>
+              <hashTree/>
+            </hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Create Project 4 &amp; Invite Users" enabled="true"/>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create new Project 4" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+  &quot;name&quot;: &quot;${testPrefix}FOR CYPRESS TESTING ONLY&quot;,&#xd;
+  &quot;classification&quot;: &quot;production&quot;,&#xd;
+  &quot;startDate&quot;: &quot;2010-01-01&quot;,&#xd;
+  &quot;endDate&quot;: &quot;2015-12-31&quot;,&#xd;
+  &quot;type&quot;: &quot;Hospital&quot;,&#xd;
+  &quot;projectValue&quot;: {&#xd;
+    &quot;value&quot;: 1650000,&#xd;
+    &quot;currency&quot;: &quot;USD&quot;&#xd;
+  },&#xd;
+  &quot;jobNumber&quot;: &quot;HP-0002&quot;,&#xd;
+  &quot;addressLine1&quot;: &quot;123 Main Street&quot;,&#xd;
+  &quot;addressLine2&quot;: &quot;Suite 2&quot;,&#xd;
+  &quot;city&quot;: &quot;San Francisco&quot;,&#xd;
+  &quot;stateOrProvince&quot;: &quot;California&quot;,&#xd;
+  &quot;postalCode&quot;: &quot;94001&quot;,&#xd;
+  &quot;country&quot;: &quot;United States&quot;,&#xd;
+  &quot;timezone&quot;: &quot;America/Los_Angeles&quot;,&#xd;
+  &quot;constructionType&quot;: &quot;New Construction&quot;,&#xd;
+  &quot;deliveryMethod&quot;: &quot;Unit Price&quot;,&#xd;
+  &quot;currentPhase&quot;: &quot;Design&quot;,&#xd;
+  &quot;products&quot;: [&#xd;
+    {&#xd;
+      &quot;key&quot;: &quot;docs&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;key&quot;: &quot;build&quot;&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.path">/construction/admin/v1/accounts/${accountId2}/projects</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+                <boolProp name="HTTPSampler.image_parser">false</boolProp>
+                <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+                <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+                <boolProp name="HTTPSampler.md5">false</boolProp>
+                <intProp name="HTTPSampler.ipSourceType">0</intProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                  <stringProp name="JSONPostProcessor.referenceNames">projectId3</stringProp>
+                  <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                  <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+                </JSONPostProcessor>
+                <hashTree/>
+                <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - accountId" enabled="true">
+                  <stringProp name="JSONPostProcessor.referenceNames">accountId</stringProp>
+                  <stringProp name="JSONPostProcessor.jsonPathExprs">$.accountId</stringProp>
+                  <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+                </JSONPostProcessor>
+                <hashTree/>
+                <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+                  <stringProp name="ConstantTimer.delay">2000</stringProp>
+                </ConstantTimer>
+                <hashTree/>
+                <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 - Write data in Project Admin json file" enabled="true">
+                  <stringProp name="cacheKey">true</stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import java.nio.file.Files
+import java.nio.file.Paths
+import java.nio.charset.StandardCharsets
+
+// Define the path to your file
+
+try {
+	def filePath = &apos;/Users/kalyanikachhi/Documents/JmeterRegionalization/JmeterTestDataCreationRegionalization/src/testResult/index_projectAdmin.json&apos;
+	
+ // Read the existing content of the JSON file
+    def fileContent = new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8)
+
+    // Parse the JSON content
+    def jsonData = new JsonSlurper().parseText(fileContent)
+	
+	// Update the variable values
+	if(jsonData.testEditMembers.projectName.contains(&quot;FOR CYPRESS TESTING ONLY&quot;))
+     {
+		jsonData.testEditMembers.projectId = vars.get(&quot;projectId3&quot;)
+     }
+     if(jsonData.advanceProjectMembers.accountName == &quot;MC Testing - R13N Projects and Members&quot;)
+     {			
+		jsonData.advanceProjectMembers.accountId = vars.get(&quot;accountId&quot;)
+     }
+	
+    def updatedJson = JsonOutput.prettyPrint(JsonOutput.toJson(jsonData))
+	
+ // Write the updated JSON string back to the file
+    Files.write(Paths.get(filePath), updatedJson.getBytes(StandardCharsets.UTF_8))
+
+} catch (Exception e) {
+    log.error(&quot;Error writing to file: &quot; + e.message)
+}</stringProp>
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                </JSR223PostProcessor>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Invite Project Admin User 11 to project" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+		  	&quot;email&quot;: &quot;${testPrefix}testprojectmember_1_${env}@pbrnfri5.mailosaur.net&quot;,&#xd;
+		 	 &quot;firstName&quot;: &quot;testprojectmember1&quot;,&#xd;
+		 	 &quot;lastName&quot;: &quot;testprojectmemberregionLastName1&quot;,&#xd;
+		 	 &quot;products&quot;:[&#xd;
+			 	 {&#xd;
+			          &quot;key&quot;: &quot;projectAdministration&quot;,&#xd;
+			          &quot;access&quot;: &quot;administrator&quot;&#xd;
+	     		 }&#xd;
+		 	]&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+                <stringProp name="HTTPSampler.protocol">https</stringProp>
+                <stringProp name="HTTPSampler.path">/construction/admin/v1/projects/${projectId}/users</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+                <boolProp name="HTTPSampler.image_parser">false</boolProp>
+                <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+                <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+                <boolProp name="HTTPSampler.md5">false</boolProp>
+                <intProp name="HTTPSampler.ipSourceType">0</intProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                  <stringProp name="JSONPostProcessor.referenceNames">topicID</stringProp>
+                  <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                  <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+                </JSONPostProcessor>
+                <hashTree/>
+              </hashTree>
+              <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor - Write data in json file" enabled="true">
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import java.nio.file.Files
+import java.nio.file.Paths
+import java.nio.charset.StandardCharsets
+
+// Define the path to your file
+
+try {
+	def filePath = &apos;/Users/kalyanikachhi/Documents/JmeterRegionalization/JmeterTestDataCreationRegionalization/src/testResult/index.json&apos;
+	
+ // Read the existing content of the JSON file
+    def fileContent = new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8)
+
+    // Parse the JSON content
+    def jsonData = new JsonSlurper().parseText(fileContent)
+	
+	// Update the variable values
+
+     if(jsonData.accountMember2.projectName2.contains(&quot;FOR CYPRESS TESTING ONLY&quot;))
+     {
+		jsonData.accountMember2.accountId = vars.get(&quot;accountId&quot;)
+		jsonData.accountMember2.projectId1 = vars.get(&quot;projectId&quot;)
+		jsonData.accountMember2.projectId2 = vars.get(&quot;projectId3&quot;)
+     }
+	
+    def updatedJson = JsonOutput.prettyPrint(JsonOutput.toJson(jsonData))
+	
+ // Write the updated JSON string back to the file
+    Files.write(Paths.get(filePath), updatedJson.getBytes(StandardCharsets.UTF_8))
+
+
+
+} catch (Exception e) {
+    log.error(&quot;Error writing to file: &quot; + e.message)
+}</stringProp>
+                <stringProp name="scriptLanguage">groovy</stringProp>
+              </JSR223PostProcessor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add new account user 5" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+		  	&quot;email&quot;: &quot;${testPrefix}user_apma_${env}+24@pbrnfri5.mailosaur.net&quot;,&#xd;
+		 	 &quot;firstName&quot;: &quot;APMA&quot;,&#xd;
+		 	 &quot;lastName&quot;: &quot;User&quot;,&#xd;
+		     &quot;accessLevels&quot;:&#xd;
+		      {&#xd;
+				&quot;accountAdmin&quot;:true,&#xd;
+				&quot;accountStandardsAdministrator&quot;:true&#xd;
+		     }&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">/bim360/admin/v1/accounts/${accountId2}/users</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">userID</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.autodeskId</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add new account user 6" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+		  	&quot;email&quot;: &quot;${testPrefix}createproject_${env}@pbrnfri5.mailosaur.net&quot;,&#xd;
+		 	 &quot;firstName&quot;: &quot;createproject&quot;,&#xd;
+		 	 &quot;lastName&quot;: &quot;createprojectregionLastName&quot;,&#xd;
+		 	  &quot;accessLevels&quot;:&#xd;
+		     {&#xd;
+				&quot;accountAdmin&quot;:true,&#xd;
+				&quot;accountStandardsAdministrator&quot;:true&#xd;
+		     }&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">/bim360/admin/v1/accounts/${accountId2}/users</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">userID</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.autodeskId</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add new account user 7" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+		  	&quot;email&quot;: &quot;${testPrefix}inviteusers_${env}@pbrnfri5.mailosaur.net&quot;,&#xd;
+		 	 &quot;firstName&quot;: &quot;inviteusers&quot;,&#xd;
+		 	 &quot;lastName&quot;: &quot;regionLastName&quot;,&#xd;
+		     &quot;accessLevels&quot;:&#xd;
+		      {&#xd;
+				&quot;accountAdmin&quot;:true,&#xd;
+				&quot;accountStandardsAdministrator&quot;:true&#xd;
+		     }&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">/bim360/admin/v1/accounts/${accountId2}/users</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">userID</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.autodeskId</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add new account user 8" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+		  	&quot;email&quot;: &quot;${testPrefix}user_invitations_${env}+01@pbrnfri5.mailosaur.net&quot;,&#xd;
+		 	 &quot;firstName&quot;: &quot;INVITATIONS&quot;,&#xd;
+		 	 &quot;lastName&quot;: &quot;User&quot;,&#xd;
+		 	  &quot;accessLevels&quot;:&#xd;
+		     {&#xd;
+				&quot;accountAdmin&quot;:true,&#xd;
+				&quot;accountStandardsAdministrator&quot;:true&#xd;
+		     }&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">/bim360/admin/v1/accounts/${accountId2}/users</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">userID</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.autodeskId</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add new account user 9" enabled="false">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+&#xd;
+		  	&quot;email&quot;: &quot;${testPrefix}user_invitations_emailRegion+34@pbrnfri5.mailosaur.net&quot;,&#xd;
+		 	 &quot;firstName&quot;: &quot;INVITATIONS&quot;,&#xd;
+		 	 &quot;lastName&quot;: &quot;User&quot;,&#xd;
+		 	  &quot;accessLevels&quot;:&#xd;
+		     {&#xd;
+				&quot;accountAdmin&quot;:true,&#xd;
+				&quot;accountStandardsAdministrator&quot;:true&#xd;
+		     }&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">/bim360/admin/v1/accounts/${accountId2}/users</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">userID</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.autodeskId</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+            </hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor - Write data in Account Admin file" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import java.nio.file.Files
+import java.nio.file.Paths
+import java.nio.charset.StandardCharsets
+
+// Define the path to your file
+
+try {
+	def filePath = &apos;/Users/kalyanikachhi/Documents/JmeterRegionalization/JmeterTestDataCreationRegionalization/src/testResult/index_accountAdmin.json&apos;
+	
+ // Read the existing content of the JSON file
+    def fileContent = new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8)
+
+    // Parse the JSON content
+    def jsonData = new JsonSlurper().parseText(fileContent)
+	
+	// Update the variable values
+	if(jsonData.accountMember.accountName.contains(&quot;MC Testing - R13N Projects and Members&quot;))
+     {
+		jsonData.accountMember.accountId = vars.get(&quot;accountId&quot;)
+     }
+
+     if(jsonData.accountMember2.projectName2.contains(&quot;TEST INVITES CYPRESS 02&quot;))
+     {
+		jsonData.accountMember2.accountId = vars.get(&quot;accountId&quot;)
+		jsonData.accountMember2.projectId1 = vars.get(&quot;projectId1&quot;)
+		jsonData.accountMember2.projectId2 = vars.get(&quot;projectId2&quot;)
+     }
+     if(jsonData.appGalleryViewOnly.accountName.contains(&quot;MC Testing - R13N Projects and Members&quot;))
+     {
+		jsonData.appGalleryViewOnly.accountId = vars.get(&quot;accountId&quot;)
+     }
+	
+    def updatedJson = JsonOutput.prettyPrint(JsonOutput.toJson(jsonData))
+	
+ // Write the updated JSON string back to the file
+    Files.write(Paths.get(filePath), updatedJson.getBytes(StandardCharsets.UTF_8))
+
+
+
+} catch (Exception e) {
+    log.error(&quot;Error writing to file: &quot; + e.message)
+}</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Account 3 - MC Testing - R13N MFA" enabled="true"/>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Account 3 - Create new Project 5" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+  &quot;name&quot;: &quot;${testPrefix}CYPRESS-MFA&quot;,&#xd;
+  &quot;classification&quot;: &quot;production&quot;,&#xd;
+  &quot;startDate&quot;: &quot;2010-01-01&quot;,&#xd;
+  &quot;endDate&quot;: &quot;2015-12-31&quot;,&#xd;
+  &quot;type&quot;: &quot;Hospital&quot;,&#xd;
+  &quot;projectValue&quot;: {&#xd;
+    &quot;value&quot;: 1650000,&#xd;
+    &quot;currency&quot;: &quot;USD&quot;&#xd;
+  },&#xd;
+  &quot;jobNumber&quot;: &quot;HP-0002&quot;,&#xd;
+  &quot;addressLine1&quot;: &quot;123 Main Street&quot;,&#xd;
+  &quot;addressLine2&quot;: &quot;Suite 2&quot;,&#xd;
+  &quot;city&quot;: &quot;San Francisco&quot;,&#xd;
+  &quot;stateOrProvince&quot;: &quot;California&quot;,&#xd;
+  &quot;postalCode&quot;: &quot;94001&quot;,&#xd;
+  &quot;country&quot;: &quot;United States&quot;,&#xd;
+  &quot;timezone&quot;: &quot;America/Los_Angeles&quot;,&#xd;
+  &quot;constructionType&quot;: &quot;New Construction&quot;,&#xd;
+  &quot;deliveryMethod&quot;: &quot;Unit Price&quot;,&#xd;
+  &quot;currentPhase&quot;: &quot;Design&quot;,&#xd;
+  &quot;products&quot;: [&#xd;
+    {&#xd;
+      &quot;key&quot;: &quot;docs&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;key&quot;: &quot;build&quot;&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">/construction/admin/v1/accounts/${accountId3}/projects</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - projectId" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">projectId</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - accountId" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">accountID</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.accountId</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+                <stringProp name="ConstantTimer.delay">2000</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Invite Account Admin 13" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+		  	&quot;email&quot;: &quot;${testPrefix}user_mfa_${env}+02@pbrnfri5.mailosaur.net&quot;,&#xd;
+		     &quot;firstName&quot;: &quot;MFA&quot;,&#xd;
+		     &quot;lastName&quot;: &quot;User&quot;,&#xd;
+		     &quot;accessLevels&quot;:&#xd;
+		     {&#xd;
+				&quot;accountAdmin&quot;:true,&#xd;
+				&quot;accountStandardsAdministrator&quot;:true&#xd;
+		     }&#xd;
+		     &#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">/bim360/admin/v1/accounts/${accountId3}/users</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">topicID</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Invite Account Admin User 17" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+		  	&quot;email&quot;: &quot;${testPrefix}oversheetlimit+${env}@pbrnfri5.mailosaur.net&quot;,&#xd;
+		 	 &quot;firstName&quot;: &quot;overlimit&quot;,&#xd;
+		 	 &quot;lastName&quot;: &quot;sheet&quot;,&#xd;
+		     &quot;accessLevels&quot;:&#xd;
+		      {&#xd;
+				&quot;accountAdmin&quot;:true,&#xd;
+				&quot;accountStandardsAdministrator&quot;:true&#xd;
+		     }&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">/bim360/admin/v1/accounts/${accountId3}/users</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">topicID</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Invite Project Admin User 14 to project" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+		  	&quot;email&quot;: &quot;${testPrefix}user_mfa_${env}+01@pbrnfri5.mailosaur.net&quot;,&#xd;
+		 	 &quot;firstName&quot;: &quot;MFA&quot;,&#xd;
+		 	 &quot;lastName&quot;: &quot;User&quot;,&#xd;
+		 	 &quot;products&quot;:[&#xd;
+			 	 {&#xd;
+			          &quot;key&quot;: &quot;projectAdministration&quot;,&#xd;
+			          &quot;access&quot;: &quot;administrator&quot;&#xd;
+	     		 }&#xd;
+		 	]&#xd;
+}&#xd;
+  		</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">/construction/admin/v1/projects/${projectId}/users</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">topicID</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Invite Project Admin User 15 to project" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+		  	&quot;email&quot;: &quot;${testPrefix}user_mfa_${env}+05@pbrnfri5.mailosaur.net&quot;,&#xd;
+		     &quot;firstName&quot;: &quot;MFA&quot;,&#xd;
+		 	 &quot;lastName&quot;: &quot;User&quot;,&#xd;
+		 	 &quot;products&quot;:[&#xd;
+			  	 {&#xd;
+			          &quot;key&quot;: &quot;projectAdministration&quot;,&#xd;
+			          &quot;access&quot;: &quot;administrator&quot;&#xd;
+	     		 }&#xd;
+		  	 ]&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">/construction/admin/v1/projects/${projectId}/users</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">topicID</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Invite Project Executive 12" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+		  	&quot;email&quot;: &quot;${testPrefix}user_mfa_${env}+04@pbrnfri5.mailosaur.net&quot;,&#xd;
+		 	 &quot;firstName&quot;: &quot;MFA&quot;,&#xd;
+		 	 &quot;lastName&quot;: &quot;User&quot;,&#xd;
+		     &quot;accessLevels&quot;:&#xd;
+		     {&#xd;
+				&quot;executive&quot;:true&#xd;
+		     }&#xd;
+		     &#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">/construction/admin/v1/projects/${projectId}/users</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">topicID</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+            </hashTree>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+              <stringProp name="ConstantTimer.delay">300</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Invite Project Member 12" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+		  &quot;email&quot;: &quot;${testPrefix}user_mfa_${env}+04@pbrnfri5.mailosaur.net&quot;,&#xd;
+		  &quot;firstName&quot;: &quot;MFA&quot;,&#xd;
+		  &quot;lastName&quot;: &quot;User&quot;,&#xd;
+		  &quot;products&quot;: [&#xd;
+		    {&#xd;
+		      &quot;key&quot;: &quot;build&quot;,&#xd;
+		      &quot;access&quot;: &quot;member&quot;&#xd;
+		    }&#xd;
+		  ]&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">/construction/admin/v1/projects/${projectId}/users</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">topicID</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+            </hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor - Write data in Account Admin json file" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import java.nio.file.Files
+import java.nio.file.Paths
+import java.nio.charset.StandardCharsets
+
+// Define the path to your file
+
+try {
+	def filePath = &apos;/Users/kalyanikachhi/Documents/JmeterRegionalization/JmeterTestDataCreationRegionalization/src/testResult/index_accountAdmin.json&apos;
+	
+ // Read the existing content of the JSON file
+    def fileContent = new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8)
+
+    // Parse the JSON content
+    def jsonData = new JsonSlurper().parseText(fileContent)
+	
+	// Update the variable values
+
+     if(jsonData.mfa.accountName.contains(&quot;MC Testing - R13N MFA&quot;))
+     {
+		jsonData.mfa.accountId1 = vars.get(&quot;accountId&quot;)
+     }
+     if(jsonData.licenses.mfaAccountName.contains(&quot;MC Testing - R13N MFA&quot;))
+     {
+		jsonData.licenses.limitPageAccountId = vars.get(&quot;accountId&quot;)
+     }
+	
+    def updatedJson = JsonOutput.prettyPrint(JsonOutput.toJson(jsonData))
+	
+ // Write the updated JSON string back to the file
+    Files.write(Paths.get(filePath), updatedJson.getBytes(StandardCharsets.UTF_8))
+
+
+
+} catch (Exception e) {
+    log.error(&quot;Error writing to file: &quot; + e.message)
+}</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Account 4 - MC Testing - R13N General" enabled="true"/>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Account 4 - Create new Project 6" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+  &quot;name&quot;: &quot;${testPrefix}TESTING ADVANCE ADD WITH CYPRESS test 06&quot;,&#xd;
+  &quot;classification&quot;: &quot;production&quot;,&#xd;
+  &quot;startDate&quot;: &quot;2010-01-01&quot;,&#xd;
+  &quot;endDate&quot;: &quot;2015-12-31&quot;,&#xd;
+  &quot;type&quot;: &quot;Hospital&quot;,&#xd;
+  &quot;projectValue&quot;: {&#xd;
+    &quot;value&quot;: 1650000,&#xd;
+    &quot;currency&quot;: &quot;USD&quot;&#xd;
+  },&#xd;
+  &quot;jobNumber&quot;: &quot;HP-0002&quot;,&#xd;
+  &quot;addressLine1&quot;: &quot;123 Main Street&quot;,&#xd;
+  &quot;addressLine2&quot;: &quot;Suite 2&quot;,&#xd;
+  &quot;city&quot;: &quot;San Francisco&quot;,&#xd;
+  &quot;stateOrProvince&quot;: &quot;California&quot;,&#xd;
+  &quot;postalCode&quot;: &quot;94001&quot;,&#xd;
+  &quot;country&quot;: &quot;United States&quot;,&#xd;
+  &quot;timezone&quot;: &quot;America/Los_Angeles&quot;,&#xd;
+  &quot;constructionType&quot;: &quot;New Construction&quot;,&#xd;
+  &quot;deliveryMethod&quot;: &quot;Unit Price&quot;,&#xd;
+  &quot;currentPhase&quot;: &quot;Design&quot;,&#xd;
+  &quot;products&quot;: [&#xd;
+    {&#xd;
+      &quot;key&quot;: &quot;docs&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;key&quot;: &quot;build&quot;&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">/construction/admin/v1/accounts/${accountId4}/projects</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - projectId" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">projectId</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor - accountId" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">accountID</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.accountId</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+                <stringProp name="ConstantTimer.delay">2000</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Invite Project Admin User 16 to project -TODO" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+		  	&quot;email&quot;: &quot;${testPrefix}user_apma_${env}+13@pbrnfri5.mailosaur.net&quot;,&#xd;
+		 	 &quot;firstName&quot;: &quot;APMA&quot;,&#xd;
+		 	 &quot;lastName&quot;: &quot;User&quot;,&#xd;
+		 	 &quot;products&quot;:[&#xd;
+			 	 {&#xd;
+			          &quot;key&quot;: &quot;projectAdministration&quot;,&#xd;
+			          &quot;access&quot;: &quot;administrator&quot;&#xd;
+	     		 }&#xd;
+		 	]&#xd;
+}&#xd;
+  		</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">/construction/admin/v1/projects/${projectId}/users</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">topicID</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Invite Project Admin User 17 to project -TODO" enabled="true">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+		  	&quot;email&quot;: &quot;${testPrefix}user_apma_${env}+26@pbrnfri5.mailosaur.net&quot;,&#xd;
+		 	 &quot;firstName&quot;: &quot;APMA&quot;,&#xd;
+		 	 &quot;lastName&quot;: &quot;User&quot;,&#xd;
+		 	 &quot;products&quot;:[&#xd;
+			 	 {&#xd;
+			          &quot;key&quot;: &quot;projectAdministration&quot;,&#xd;
+			          &quot;access&quot;: &quot;administrator&quot;&#xd;
+	     		 }&#xd;
+		 	]&#xd;
+}&#xd;
+  		</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">/construction/admin/v1/projects/${projectId}/users</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">topicID</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create new Project 7 TODO" enabled="false">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+  &quot;name&quot;: &quot;${testPrefix}551 Sheets&quot;,&#xd;
+  &quot;classification&quot;: &quot;production&quot;,&#xd;
+  &quot;startDate&quot;: &quot;2010-01-01&quot;,&#xd;
+  &quot;endDate&quot;: &quot;2015-12-31&quot;,&#xd;
+  &quot;type&quot;: &quot;Hospital&quot;,&#xd;
+  &quot;projectValue&quot;: {&#xd;
+    &quot;value&quot;: 1650000,&#xd;
+    &quot;currency&quot;: &quot;USD&quot;&#xd;
+  },&#xd;
+  &quot;jobNumber&quot;: &quot;HP-0002&quot;,&#xd;
+  &quot;addressLine1&quot;: &quot;123 Main Street&quot;,&#xd;
+  &quot;addressLine2&quot;: &quot;Suite 2&quot;,&#xd;
+  &quot;city&quot;: &quot;San Francisco&quot;,&#xd;
+  &quot;stateOrProvince&quot;: &quot;California&quot;,&#xd;
+  &quot;postalCode&quot;: &quot;94001&quot;,&#xd;
+  &quot;country&quot;: &quot;United States&quot;,&#xd;
+  &quot;timezone&quot;: &quot;America/Los_Angeles&quot;,&#xd;
+  &quot;constructionType&quot;: &quot;New Construction&quot;,&#xd;
+  &quot;deliveryMethod&quot;: &quot;Unit Price&quot;,&#xd;
+  &quot;currentPhase&quot;: &quot;Design&quot;,&#xd;
+  &quot;products&quot;: [&#xd;
+    {&#xd;
+      &quot;key&quot;: &quot;docs&quot;&#xd;
+    },&#xd;
+    {&#xd;
+      &quot;key&quot;: &quot;build&quot;&#xd;
+    }&#xd;
+  ]&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">/construction/admin/v1/accounts/${accountId4}/projects</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">projectId</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+                <stringProp name="ConstantTimer.delay">2000</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Invite Project Admin User 17 to project - Autodesk Build" enabled="false">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+		  	&quot;email&quot;: &quot;${testPrefix}oversheetlimit+${env}@pbrnfri5.mailosaur.net&quot;,&#xd;
+		 	 &quot;firstName&quot;: &quot;overlimit&quot;,&#xd;
+		 	 &quot;lastName&quot;: &quot;sheet&quot;,&#xd;
+		 	 &quot;products&quot;:[&#xd;
+			 	 {&#xd;
+			          &quot;key&quot;: &quot;projectAdministration&quot;,&#xd;
+			          &quot;access&quot;: &quot;administrator&quot;&#xd;
+	     		 }&#xd;
+		 	]&#xd;
+}&#xd;
+  		</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">/construction/admin/v1/projects/${projectId}/users</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">topicID</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Invite Account Admin User 16" enabled="false">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+		  	&quot;email&quot;: &quot;${testPrefix}user_apma_${env}+24@pbrnfri5.mailosaur.net&quot;,&#xd;
+		 	 &quot;firstName&quot;: &quot;APMA&quot;,&#xd;
+		 	 &quot;lastName&quot;: &quot;User&quot;,&#xd;
+		     &quot;accessLevels&quot;:&#xd;
+		      {&#xd;
+				&quot;accountAdmin&quot;:true,&#xd;
+				&quot;accountStandardsAdministrator&quot;:true&#xd;
+		     }&#xd;
+		  &#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">/bim360/admin/v1/accounts/${accountId4}/users</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">topicID</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Invite Account Admin User 0" enabled="false">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+		  	&quot;email&quot;: &quot;${testPrefix}turnedoffsubscriptions_${env}@pbrnfri5.mailosaur.net&quot;,&#xd;
+		 	 &quot;firstName&quot;: &quot;Expired&quot;,&#xd;
+		 	 &quot;lastName&quot;: &quot;Account&quot;,&#xd;
+		 	  &quot;accessLevels&quot;:&#xd;
+		     {&#xd;
+				&quot;accountAdmin&quot;:true,&#xd;
+				&quot;accountStandardsAdministrator&quot;:true&#xd;
+		     }&#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">/bim360/admin/v1/accounts/${accountId4}/users</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">topicID</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Invite Account Admin User 18" enabled="false">
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&#xd;
+		  	&quot;email&quot;: &quot;${testPrefix}app_gallery_1_${env}@opqr3hf6.mailosaur.net&quot;,&#xd;
+		 	 &quot;firstName&quot;: &quot;App Gallery&quot;,&#xd;
+		 	 &quot;lastName&quot;: &quot;One&quot;,&#xd;
+		     &quot;accessLevels&quot;:&#xd;
+		      {&#xd;
+				&quot;accountAdmin&quot;:true,&#xd;
+				&quot;accountStandardsAdministrator&quot;:true&#xd;
+		     }     &#xd;
+}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">${baseUrl}</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">/bim360/admin/v1/accounts/${accountId4}/users</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+              <boolProp name="HTTPSampler.image_parser">false</boolProp>
+              <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+              <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+              <boolProp name="HTTPSampler.md5">false</boolProp>
+              <intProp name="HTTPSampler.ipSourceType">0</intProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">topicID</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+            </hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor - Write data in json file" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import java.nio.file.Files
+import java.nio.file.Paths
+import java.nio.charset.StandardCharsets
+
+// Define the path to your file
+
+try {
+	def filePath = &apos;/Users/kalyanikachhi/Documents/JmeterRegionalization/JmeterTestDataCreationRegionalization/src/testResult/index_accountAdmin.json&apos;
+	
+ // Read the existing content of the JSON file
+    def fileContent = new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8)
+
+    // Parse the JSON content
+    def jsonData = new JsonSlurper().parseText(fileContent)
+	
+	// Update the variable values
+
+     if(jsonData.appGallery.accountName.contains(&quot;MC Testing - R13N General&quot;))
+     {
+		jsonData.appGallery.accountId = vars.get(&quot;accountId&quot;)
+     }
+	 if(jsonData.testAccountCustomIntegrations.account1Name.contains(&quot;MC Testing - R13N General&quot;))
+     {
+		jsonData.testAccountCustomIntegrations.accountId = vars.get(&quot;accountId&quot;)
+     }
+    def updatedJson = JsonOutput.prettyPrint(JsonOutput.toJson(jsonData))
+	
+ // Write the updated JSON string back to the file
+    Files.write(Paths.get(filePath), updatedJson.getBytes(StandardCharsets.UTF_8))
+
+
+
+} catch (Exception e) {
+    log.error(&quot;Error writing to file: &quot; + e.message)
+}</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 - Update env in Account Admin json file" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import java.nio.file.Files
+import java.nio.file.Paths
+import java.nio.charset.StandardCharsets
+
+// Define the path to your file
+
+try {
+	def filePath = &apos;/Users/kalyanikachhi/Documents/JmeterRegionalization/JmeterTestDataCreationRegionalization/src/testResult/index_accountAdmin.json&apos;
+
+	File file = new File(filePath)
+	
+	// Read the content of the file
+    String fileContent = file.text
+
+     // Get the value of the JMeter variable (e.g., env)
+	String envValue = vars.get(&quot;env&quot;)
+
+    // Perform text replacement
+    String updatedContent = fileContent.replace(&quot;\${env}&quot;, envValue)
+
+    // Write the updated content back to the file
+    file.text = updatedContent
+
+	
+    log.info(&quot;File updated successfully.&quot;)
+
+
+} catch (Exception e) {
+    log.error(&quot;Error writing to file: &quot; + e.message)
+}</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 - Update env in Project Admin json file" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import java.nio.file.Files
+import java.nio.file.Paths
+import java.nio.charset.StandardCharsets
+
+// Define the path to your file
+
+try {
+	def filePath = &apos;/Users/kalyanikachhi/Documents/JmeterRegionalization/JmeterTestDataCreationRegionalization/src/testResult/index_projectAdmin.json&apos;
+
+	File file = new File(filePath)
+	
+    // Read the content of the file
+    String fileContent = file.text
+
+    // Get the value of the JMeter variable (e.g., env)
+	String envValue = vars.get(&quot;env&quot;)
+
+    // Perform text replacement
+    String updatedContent = fileContent.replace(&quot;\${env}&quot;, envValue)
+
+    // Write the updated content back to the file
+    file.text = updatedContent
+
+	
+    log.info(&quot;File updated successfully.&quot;)
+
+
+} catch (Exception e) {
+    log.error(&quot;Error writing to file: &quot; + e.message)
+}</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

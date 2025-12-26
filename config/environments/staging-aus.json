@@ -1,0 +1,14 @@
+{
+  "name": "staging-aus",
+  "baseURL": "developer-stg.api.autodesk.com",
+  "uiBaseURL": "https://accounts-staging.autodesk.com/",
+  "region": "AUS",
+  "defaultUserId": "JPA2LSFGKF8WFY78",
+  "accountIds": {
+    "account1": "90a64908-3f3f-4d23-a817-423a39b3952e",
+    "account2": "aad8406b-d478-403a-855a-9691fe9bbd49",
+    "account3": "30c373cc-549b-4a14-92c1-66ca02971d4f",
+    "account4": "94f8cb63-3454-43e0-b43d-74c76fe13e09"
+  }
+}
+

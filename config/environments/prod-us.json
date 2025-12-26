@@ -1,0 +1,14 @@
+{
+  "name": "prod-us",
+  "baseURL": "developer.api.autodesk.com",
+  "uiBaseURL": "https://accounts.autodesk.com/",
+  "region": "US",
+  "defaultUserId": "H482DVJKMRKAB8VF",
+  "accountIds": {
+    "account1": "483a20ef-e6dd-4764-8712-dc02d2ef73af",
+    "account2": "483a20ef-e6dd-4764-8712-dc02d2ef73af",
+    "account3": "REPLACE_ME_US_ACCOUNT3",
+    "account4": "REPLACE_ME_US_ACCOUNT4"
+  }
+}
+

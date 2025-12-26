@@ -1,0 +1,18 @@
+{
+  "name": "qa",
+  "baseURL": "developer-stg.api.autodesk.com",
+  "uiBaseURL": "https://acc-staging.autodesk.com/",
+  "region": "US",
+  "defaultUserId": "JPA2LSFGKF8WFY78",
+  "defaultUserId1_1": "XGU2GFLMLQ6F4ED7",
+  "accountIds": {
+    "account1": "aa41794a-4148-42a7-b183-4d514c88674b",
+    "account2": "aa41794a-4148-42a7-b183-4d514c88674b",
+    "account3": "aa41794a-4148-42a7-b183-4d514c88674b",
+    "account4": "aa41794a-4148-42a7-b183-4d514c88674b",
+    "account1_1": "aa41794a-4148-42a7-b183-4d514c88674b",
+    "account2_2": "aa41794a-4148-42a7-b183-4d514c88674b",
+    "account3_2": "aa41794a-4148-42a7-b183-4d514c88674b",
+    "account4_2": "aa41794a-4148-42a7-b183-4d514c88674b"
+  }
+}

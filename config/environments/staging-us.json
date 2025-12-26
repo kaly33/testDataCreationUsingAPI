@@ -1,0 +1,19 @@
+{
+  "name": "staging-us",
+  "baseURL": "developer-stg.api.autodesk.com",
+  "uiBaseURL": "https://accounts-staging.autodesk.com/",
+  "region": "US",
+  "defaultUserId": "JPA2LSFGKF8WFY78",
+  "defaultUserId1_1": "XGU2GFLMLQ6F4ED7",
+  "accountIds": {
+    "account1": "dcb82cc0-78f2-4a63-8c16-f8dd120e0808",
+    "account2": "dcb82cc0-78f2-4a63-8c16-f8dd120e0808",
+    "account3": "dcb82cc0-78f2-4a63-8c16-f8dd120e0808",
+    "account4": "dcb82cc0-78f2-4a63-8c16-f8dd120e0808",
+    "account1_1": "317b1c37-0629-4fd3-9c10-bb51c35c3fbd",
+    "account2_2": "249ffe9b-e107-4cbc-ae29-4ebdab8fef6c",
+    "account3_2": "94af5f94-f875-4215-9b68-0fa0a8b2ce41",
+    "account4_2": "629a7162-25b2-4de3-9733-c1160b5c01da"
+  }
+}
+

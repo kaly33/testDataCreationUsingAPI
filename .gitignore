@@ -1,0 +1,18 @@
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Environment variables
+.env
+.env.local
+
+# Cursor IDE
+.cursor/
+~/
+
+# Mac
+.DS_Store

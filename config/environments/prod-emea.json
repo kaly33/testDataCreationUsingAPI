@@ -1,0 +1,13 @@
+{
+  "name": "prod-emea",
+  "baseURL": "developer.api.autodesk.com",
+  "uiBaseURL": "https://accounts.autodesk.com/",
+  "region": "EMEA",
+  "defaultUserId": "H482DVJKMRKAB8VF",
+  "accountIds": {
+    "account1": "830f901a-6de3-47db-ab93-1edc265d2a0f",
+    "account2": "830f901a-6de3-47db-ab93-1edc265d2a0f",
+    "account3": "830f901a-6de3-47db-ab93-1edc265d2a0f",
+    "account4": "830f901a-6de3-47db-ab93-1edc265d2a0f"
+  }
+}
